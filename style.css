@@ -1,0 +1,844 @@
+:root {
+  /*Penulisan variabel dalam css*/
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --white80: #f5f5f5;
+  --starDesign: #ded9d7;
+  --railDesign: #121212;
+  --header: #e7bc42;
+}
+
+body {
+  font-size: 1.2rem; /*1.2rem adalah 1.2 * 16 pixel */
+  font-family: "Work Sans", sans-serif;
+}
+
+.reload {
+  visibility: hidden;
+}
+
+.transition.fadeOut {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+.transition-in.fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.modalHero {
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(0);
+  background-image: url(img/bg5.png);
+}
+
+.overlayHero {
+  background-color: #000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2001;
+  top: 0;
+  opacity: 0.5;
+  left: 0;
+}
+
+.content-modalHero {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2002;
+  top: 10px;
+  left: 0;
+}
+
+.info_modalHero {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.removeModals {
+  transform: translateY(200%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: none;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh; /*VH = View Port maksudnya satu layar, jika 100vh akan memenuhi satu layar*/
+}
+
+.hero h1,
+.hero h2,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+  color: var(--white80);
+}
+
+.hero h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 6rem;
+  color: var(--header) !important;
+  text-shadow: var(--shadow);
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero p.maaf {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.hero a {
+  color: #121212;
+  background-color: var(--starDesign);
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: #121212;
+  color: var(--starDesign);
+}
+
+.mynavbar {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ) !important; /* maksud important disini adalah agar style ini yg paling didahulukan*/
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: var(--railDesign);
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+  color: var(--railDesign);
+}
+
+.home {
+  background-image: url(img/pattern.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: 0;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  z-index: -1;
+}
+
+.overlayHome {
+  background-color: #000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  opacity: 0.9;
+  left: 0;
+}
+
+.home span.salam {
+  text-transform: uppercase;
+  color: var(--white80);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.home h2,
+.info h2,
+.story h2,
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
+  color: var(--header);
+  font-family: "Dancing Script", cursive;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.home h3 {
+  color: var(--starDesign);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.1rem;
+  color: var(--starDesign);
+}
+
+.home .couple {
+  margin-top: 100px;
+}
+
+.home .couple h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  color: var(--header);
+}
+
+.home .couple img {
+  width: 100%;
+}
+
+.home .heart {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%; /*Didorong kekanan agar love nya berada ditengah*/
+  transform: translateX(-50%) translateY(65px); /*Ditarik lagi kekiri dari sumbu X, X itu kiri kanan dan Y atas bawah*/
+}
+
+.home .heart i {
+  margin: auto;
+  color: var(--pink);
+}
+
+.mobile-only {
+  visibility: hidden;
+}
+
+.info {
+  background-color: var(--railDesign);
+  color: var(--starDesign);
+  min-height: 100vh;
+  padding-top: 17rem;
+  padding-bottom: 8rem;
+}
+
+.info .alamat {
+  font-size: 1.1rem;
+}
+
+.info .description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.info .card {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid #999;
+}
+
+.info .card-header {
+  border-bottom: 1px solid #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.info .card-body {
+  font-size: 1rem;
+}
+
+.info .card-footer {
+  border-top: 1px solid #999;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.story {
+  /*BG by marifdez freepik */
+  background-image: url(img/pattern2.png);
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.gallery,
+.rsvp,
+.gifts {
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.story span,
+.gallery span,
+.rsvp span,
+.gifts span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.story p,
+.gallery p,
+.rsvp p,
+.gifts p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 2px;
+  background-color: #ccc;
+  left: 50%;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li::after {
+  clear: both;
+}
+
+.timeline li .timeline-image {
+  width: 160px;
+  height: 160px;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+}
+
+.timeline li .timeline-panel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0px solid #ccc;
+  border-bottom: 15px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #ccc;
+  border-right: 0px solid #ccc;
+  border-bottom: 14px solid transparent;
+  top: 81px;
+  right: -13px;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -13px;
+  right: auto;
+}
+
+.gallery {
+  background-color: #f5f5f5;
+}
+
+.gifts {
+  /*BG by marifdez freepik */
+  background-image: url(img/pattern2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.turut-mengundang {
+  margin-top: 40px;
+  width: 100%;
+  font-weight: 300;
+  color: var(--railDesign);
+}
+
+.turut-mengundang h5 {
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  transform: translateX(3%);
+}
+
+.keluarga-pria {
+  margin: auto;
+}
+.keluarga-wanita {
+  margin: auto;
+}
+
+.turut-mengundang li {
+  list-style: none;
+}
+
+.list-bg {
+  background-color: transparent;
+}
+
+.rsvp {
+  background-color: var(--bg);
+}
+
+.rsvp h2 {
+  font-size: 4.5ren;
+}
+
+.rsvp p {
+  color: white;
+}
+
+.rsvp form label {
+  color: white;
+}
+
+.rsvp button {
+  background-color: var(--pink);
+  color: white;
+  border: 1px solid var(--pink);
+}
+
+.rsvp button:hover {
+  background-color: white;
+  color: var(--pink);
+  border: 1px solid white;
+}
+
+.rsvp form {
+  width: 100%;
+}
+
+footer {
+  padding: 1rem;
+  background-image: url(img/footer.png);
+  background-position: center;
+  color: white;
+}
+
+footer a {
+  color: var(--bg);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 0.3rem;
+}
+
+/* Media Query */
+/* Extra Large */
+@media (max-width: 1200px) {
+  .home .heart {
+    transform: translateX(-50%) translateY(45px);
+  }
+}
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 70px;
+  }
+
+  .home h3,
+  .home p {
+    font-size: 1.3rem;
+  }
+
+  .home .heart {
+    display: none;
+  }
+
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
+  }
+
+  .timeline li .timeline-panel {
+    /* width: calc((100%-100px)); */
+    width: 65%;
+    float: right;
+  }
+
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+  }
+}
+
+/* tablet */
+@media (max-width: 767px) {
+  html {
+    font-size: 65%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 60px;
+    margin: 8px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+    margin-right: 25%;
+  }
+
+  .info {
+    min-height: 100vh;
+  }
+
+  .offcanvas {
+    left: 60%;
+  }
+
+  .close {
+    padding-right: 80% !important;
+  }
+
+  .timeline li .timeline-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .turut-mengundang h5 {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    transform: translateX(0);
+  }
+
+  .turut-mengundang ul {
+    transform: translateX(-3%);
+  }
+
+  .rsvp form {
+    width: 80%;
+    margin: auto;
+  }
+
+  .rsvp-submit {
+    width: 100%;
+    margin-top: 0px !important;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 45%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 40px;
+    margin: 1px;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+    margin-right: 40%;
+  }
+
+  .offcanvas {
+    left: 40%;
+  }
+
+  .close {
+    left: 20% !important;
+    transform: translateX(-15%);
+  }
+
+  .home {
+    padding-top: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .couple {
+    margin-top: 50px !important;
+  }
+
+  .couple-male-name {
+    margin-top: 20px;
+  }
+
+  .couple-female-name {
+    margin-top: 10px;
+  }
+
+  .couple-female {
+    margin-top: 30px;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 70px;
+  }
+
+  .info {
+    padding-top: 10rem;
+  }
+
+  .story {
+    min-height: 100vh;
+  }
+
+  .timeline li .timeline-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 60%;
+    transform: translateX(-10%);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 35px;
+  }
+  .timeline li .timeline-panel::after {
+    top: 36px;
+  }
+
+  .gifts {
+    min-height: 100vh;
+  }
+
+  .turut-mengundang h5 {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    transform: translateX(0);
+  }
+
+  .rsvp {
+    min-height: 100vh;
+  }
+
+  .gallery {
+    min-height: 100vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .rsvp form {
+    width: 80%;
+    margin: auto;
+  }
+
+  .rsvp-submit {
+    width: 100%;
+    margin-top: 0px !important;
+  }
+}
+
+@media (max-width: 280px) {
+  html {
+    font-size: 40%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 30px;
+    margin: 1px;
+  }
+
+  .close {
+    left: 20% !important;
+    transform: translateX(-30%);
+  }
+
+  .home {
+    padding-top: 10rem;
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 50px;
+  }
+
+  .info {
+    padding-top: 100px;
+  }
+
+  .story {
+    min-height: 100vh;
+  }
+
+  .timeline li .timeline-panel {
+    width: 45%;
+    transform: translateX(-10%);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 35px;
+  }
+  .timeline li .timeline-panel::after {
+    top: 36px;
+  }
+
+  .gallery {
+    min-height: 100vh;
+  }
+
+  .gifts {
+    min-height: 100vh;
+  }
+
+  .turut-mengundang h5 {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    transform: translateX(0);
+  }
+
+  .rsvp {
+    min-height: 100vh;
+  }
+
+  .rsvp form {
+    width: 80%;
+    margin: auto;
+  }
+
+  .rsvp-submit {
+    width: 100%;
+    margin-top: 0px !important;
+  }
+}
+
+/* Animation Transition */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  from {
+    scale: 100%;
+  }
+  to {
+    scale: 200%;
+  }
+}
