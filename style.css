@@ -850,12 +850,33 @@ footer li {
   }
 
   .playAudio i {
-    font-size: 3rem;
-    top: 10%;
+    /* font-size: 3rem;
+    top: 8%;
+    left: 15%;
     margin: auto;
     justify-content: center !important;
-    align-items: center;
+    align-items: center; */
     /* transform: translateX(-1px) translateY(-3px) !important; */
+  }
+
+  .playBtn {
+    visibility: visible;
+    font-size: 3rem;
+    top: 8%;
+    left: 18%;
+    margin: auto !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+
+  .pauseBtn {
+    visibility: hidden;
+    font-size: 3rem;
+    top: 8%;
+    left: 15%;
+    margin: auto !important;
+    justify-content: center !important;
+    align-items: center;
   }
 
   .home {
