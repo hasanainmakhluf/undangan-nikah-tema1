@@ -32,14 +32,19 @@
   </head>
   <body class="transition-in reload">
 
-    <div class="widget-audio">
-      <audio id="testAudio" class="music" loop>
-        <source src="audio/Laksana Surgaku.mp3" type="audio/mpeg" />
-      </audio>
-        <button class="btn btn-primary playAudio" id="playAudio" onclick="playPause()">
-          <i id="icon" class="bi bi-play-fill playBtn"></i>
-          <i id="icon" class="bi bi-pause-fill pauseBtn"></i>
-        </button>
+    <div class="widget-audio justify-content-center">
+      <div class="row">
+        <button class="btn btn-primary envelope" id="envelope" onclick="envelopeOpen()"><i class="bi bi-envelope-heart-fill"></i></button>
+      </div>
+      <div class="row">
+        <audio id="testAudio" class="music" loop>
+          <source src="audio/Laksana Surgaku.mp3" type="audio/mpeg" />
+        </audio>
+          <button class="btn btn-primary playAudio" id="playAudio" onclick="playPause()">
+            <i id="icon" class="bi bi-play-fill playBtn"></i>
+            <i id="icon" class="bi bi-pause-fill pauseBtn"></i>
+          </button>
+      </div>
     </div>
 
        <!-- Full screen modal -->
@@ -681,8 +686,15 @@
       /*Jika di local storage ada key opened maka undangan dihilangkan*/
       if (localStorage.getItem("opened")) {
           modalHero.style.display = "none";
-          
         };
+
+      const envelope = document.querySelector(".envelope");
+      function envelopeOpen(){
+        localStorage.removeItem("opened");
+        modalHero.style.display = "visible";
+        window.location.reload();
+      }
+
     </script>
 
     <script>
