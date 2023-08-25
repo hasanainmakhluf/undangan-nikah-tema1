@@ -12,6 +12,7 @@
 body {
   font-size: 1.2rem; /*1.2rem adalah 1.2 * 16 pixel */
   font-family: "Work Sans", sans-serif;
+  height: 100%;
 }
 
 .reload {
@@ -819,7 +820,31 @@ footer li {
 
   .close {
     left: 20% !important;
-    transform: translateX(-15%);
+    transform: translateX(-13%);
+  }
+
+  .widget-audio {
+    display: flex;
+    top: 90%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    left: 20px !important;
+    top: 0 !important;
+
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(-1px) translateY(-3px);
   }
 
   .home {
