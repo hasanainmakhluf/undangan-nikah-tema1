@@ -849,8 +849,11 @@ footer li {
 
   .playAudio i {
     font-size: 3rem;
+
     margin: auto;
-    transform: translateX(-1px) translateY(-3px) !important;
+    justify-content: center !important;
+    align-items: center;
+    /* transform: translateX(-1px) translateY(-3px) !important; */
   }
 
   .home {
