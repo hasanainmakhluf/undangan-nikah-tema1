@@ -573,6 +573,11 @@ footer li {
     padding: 70px;
   }
 
+  .widget-audio {
+    display: flex;
+    top: 90%;
+  }
+
   .home h3,
   .home p {
     font-size: 1.3rem;
@@ -628,7 +633,7 @@ footer li {
     display: flex;
     position: absolute;
     left: 40px;
-    top: 1230px;
+    top: 0px;
     background-color: var(--pink);
   }
 
@@ -671,7 +676,7 @@ footer li {
     display: flex;
     position: absolute;
     left: 30px;
-    top: 1080px;
+    top: 0;
     background-color: var(--pink);
   }
 
@@ -714,7 +719,7 @@ footer li {
     display: flex;
     position: absolute;
     left: 30px;
-    top: 920px;
+    top: 0;
     background-color: var(--pink);
   }
 
@@ -847,16 +852,6 @@ footer li {
     justify-content: center;
     align-items: center;
     background-color: var(--pink);
-  }
-
-  .playAudio i {
-    /* font-size: 3rem;
-    top: 8%;
-    left: 15%;
-    margin: auto;
-    justify-content: center !important;
-    align-items: center; */
-    /* transform: translateX(-1px) translateY(-3px) !important; */
   }
 
   .playBtn {
