@@ -682,10 +682,6 @@
         audio.play();
       };
 
-      document.addEventListener("touchend", () => {
-        audio.play();
-      })
-
       /*Jika di local storage ada key opened maka undangan dihilangkan*/
       if (localStorage.getItem("opened")) {
           modalHero.style.display = "none";
