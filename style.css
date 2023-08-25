@@ -821,7 +821,8 @@ footer li {
   .close {
     display: flex;
     left: 0 !important;
-    transform: translateX(-50%);
+    right: 10% !important;
+    transform: translateX(-20%) !important;
   }
 
   .nav-mobile {
