@@ -26,6 +26,43 @@ body {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
+.widget-audio {
+  position: fixed;
+  z-index: 10;
+}
+
+.playAudio {
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  left: 70px;
+  top: 800px;
+  background-color: var(--pink);
+}
+
+.playAudio i {
+  font-size: 3rem;
+  margin: auto;
+  transform: translateX(0px) translateY(-5px);
+  position: absolute;
+}
+
+.playAudio:hover {
+  background-color: var(--pink);
+}
+
+.playBtn {
+  visibility: visible;
+}
+
+.pauseBtn {
+  visibility: hidden;
+}
+
 .modalHero {
   position: fixed;
   z-index: 2000;
@@ -72,6 +109,7 @@ body {
 
 .removeModals {
   transform: translateY(200%);
+  transition: 1s ease-in-out;
 }
 
 .hero::before {
@@ -574,6 +612,135 @@ footer li {
   }
 }
 
+/*Surface Pro 7*/
+@media (max-width: 912px) {
+  html {
+    font-size: 95%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 40px;
+    top: 1230px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(0px) translateY(-3px);
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .couple-male-name {
+    margin-top: 30px !important;
+  }
+
+  .couple-female-name {
+    margin-top: 30px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 90px;
+  }
+}
+
+/*Ipad Air*/
+@media (max-width: 820px) {
+  html {
+    font-size: 80%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 30px;
+    top: 1080px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(1px) translateY(-3px);
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .couple-male-name {
+    margin-top: 30px !important;
+  }
+
+  .couple-female-name {
+    margin-top: 20px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 30px;
+  }
+}
+
+/*Ipad Mini*/
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 30px;
+    top: 920px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(-1px) translateY(-4px);
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .couple-male-name {
+    margin-top: 30px !important;
+  }
+
+  .couple-female-name {
+    margin-top: 20px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 30px;
+  }
+}
+
 /* tablet */
 @media (max-width: 767px) {
   html {
@@ -739,6 +906,231 @@ footer li {
   }
 }
 
+/*Surface Duo*/
+@media (max-width: 540px) {
+  html {
+    font-size: 60%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 650px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(-1px) translateY(-3px);
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .couple-male-name {
+    margin-top: 10px !important;
+  }
+
+  .couple-female-name {
+    margin-top: 10px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 30px;
+  }
+
+  .offcanvas {
+    left: 50%;
+  }
+
+  .close {
+    left: 20% !important;
+    transform: translateX(0%);
+  }
+}
+
+/*Iphone XR*/
+@media (max-width: 414px) {
+  html {
+    font-size: 60%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 800px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(-1px) translateY(-3px);
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .couple-male-name {
+    margin-top: 10px !important;
+  }
+
+  .couple-female-name {
+    margin-top: 10px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 30px;
+  }
+
+  .offcanvas {
+    left: 50%;
+  }
+
+  .close {
+    left: 30% !important;
+    transform: translateX(-20%);
+  }
+
+  .nav-mobile {
+    transform: translateX(-5%);
+  }
+}
+
+@media (max-width: 393px) {
+  html {
+    font-size: 60%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 770px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(-1px) translateY(-3px);
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 30px;
+  }
+}
+
+/*Iphone SE*/
+@media (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 600px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(0px) translateY(-3px);
+  }
+
+  .couple {
+    margin-top: 20px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 30px;
+  }
+
+  .offcanvas {
+    left: 50%;
+  }
+
+  .close {
+    left: 30% !important;
+    transform: translateX(-20%);
+  }
+
+  .nav-mobile {
+    transform: translateX(-5%);
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 50%;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 670px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(0px) translateY(-3px);
+  }
+
+  .couple {
+    margin-top: 30px !important;
+  }
+
+  .mobile-only {
+    visibility: visible;
+    margin-top: 30px;
+  }
+}
+
+/*Galaxy Fold*/
 @media (max-width: 280px) {
   html {
     font-size: 40%;
@@ -749,9 +1141,41 @@ footer li {
     margin: 1px;
   }
 
+  .offcanvas {
+    left: 50%;
+  }
+
   .close {
-    left: 20% !important;
-    transform: translateX(-30%);
+    left: 30% !important;
+    transform: translateX(-20%);
+  }
+
+  .nav-mobile {
+    transform: translateX(-5%);
+  }
+
+  .widget-audio {
+    position: fixed;
+    z-index: 10;
+  }
+
+  .playAudio {
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 580px;
+    background-color: var(--pink);
+  }
+
+  .playAudio i {
+    font-size: 3rem;
+    margin: auto;
+    transform: translateX(3px) translateY(2px);
   }
 
   .home {
@@ -760,6 +1184,14 @@ footer li {
 
   .couple {
     margin-top: 30px !important;
+  }
+
+  .couple-male-name {
+    margin-top: 10px !important;
+  }
+
+  .couple-female-name {
+    margin-top: 10px !important;
   }
 
   .mobile-only {

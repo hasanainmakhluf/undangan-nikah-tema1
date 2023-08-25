@@ -31,9 +31,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="transition-in reload">
-    <audio class="music" autoplay loop>
-      <source src="audio/Saat Bahagia.mp3" type="audio/mpeg" />
-    </audio>
+
+    <div class="widget-audio">
+      <audio id="testAudio" class="music" loop>
+        <source src="audio/Saat Bahagia.mp3" type="audio/mpeg" />
+      </audio>
+        <button class="btn btn-primary playAudio" id="playAudio" onclick="playPause()">
+          <i id="icon" class="bi bi-play-fill playBtn"></i>
+          <i id="icon" class="bi bi-pause-fill pauseBtn"></i>
+        </button>
+    </div>
 
        <!-- Full screen modal -->
   <section id="modalHero">
@@ -86,7 +93,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body">
+          <div class="offcanvas-body nav-mobile">
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="#home">Home</a>
               <a class="nav-link" href="#info">Info</a>
@@ -615,7 +622,29 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js">
     </script>
     <script>
+      /*Script AOS Animation On Scroll Library*/
       AOS.init();
+    </script>
+
+    <script>
+      /*Icon Ganti Saat di Klik Play Pause*/
+      const iconPlay = document.querySelector(".playBtn");
+      const iconPause = document.querySelector(".pauseBtn");
+      var count = 0;
+
+      function playPause() {
+        if(count == 0){
+          count = 1;
+          audio.play();
+          iconPlay.style.visibility = "hidden";
+          iconPause.style.visibility = "visible";
+        }else{
+          count = 0;
+          audio.pause();
+          iconPlay.style.visibility = "visible";
+          iconPause.style.visibility = "hidden";
+        }
+      };
     </script>
 
     <script>
@@ -630,28 +659,24 @@
       undangan.addEventListener("click", (e) => {
         e.preventDefault();
         transition.classList.add("removeModals");
-        transitionIn.classList.add("fadeIn");
         localStorage.setItem("opened", "true");
         audio.play();
+        count = 0;
+        iconPlay.style.visibility = "hidden";
+        iconPause.style.visibility = "visible";
+        playPause();
         setTimeout(() => {
           window.location = undangan.href;
         }, 500);
-      });
-      /*Event Ketika layar di click dan setelah di tap pada mobile*/
-      document.addEventListener("click", () => {
-        audio.play();
-        audio.volume = 1;
-       });
-      document.addEventListener("touchend", () => {
-        audio.play();
-        audio.volume = 1;
-      });
+      });      
 
-      /*Efek ketika di refresh body dari hidden menjadi visible dan efek fadeIn*/
-      document.addEventListener("DOMContentLoaded", () => {
-        reload.style.visibility = "visible";
-        transitionIn.classList.add("fadeIn");
-      });
+       /*Efek ketika di refresh body dari hidden menjadi visible dan efek fadeIn*/
+       document.addEventListener("DOMContentLoaded", () => {
+            reload.style.visibility = "visible";
+            transitionIn.classList.add("fadeIn");
+            count = 0;
+            audio.play();
+          });
 
       /*Jika di local storage ada key opened maka undangan dihilangkan*/
       if (localStorage.getItem("opened")) {
