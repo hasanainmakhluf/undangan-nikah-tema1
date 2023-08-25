@@ -672,20 +672,16 @@
 
        /*Efek ketika di refresh body dari hidden menjadi visible dan efek fadeIn*/
        document.addEventListener("DOMContentLoaded", () => {
-            audio.play();
             reload.style.visibility = "visible";
             transitionIn.classList.add("fadeIn");
             playPause();
+            document.querySelector(".playAudio").click();
           });
-
-      if(window.location.reload) {
-        audio.play();
-      };
 
       /*Jika di local storage ada key opened maka undangan dihilangkan*/
       if (localStorage.getItem("opened")) {
           modalHero.style.display = "none";
-          audio.play();
+          
         };
     </script>
 
