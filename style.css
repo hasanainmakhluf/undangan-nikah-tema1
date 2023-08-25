@@ -820,8 +820,12 @@ footer li {
 
   .close {
     display: flex;
-    left: 20% !important;
-    transform: translateX(-19%);
+    left: 0 !important;
+    transform: translateX(-29%);
+  }
+
+  .nav-mobile {
+    transform: translateX(-5%);
   }
 
   .widget-audio {
@@ -845,7 +849,7 @@ footer li {
   .playAudio i {
     font-size: 3rem;
     margin: auto;
-    transform: translateX(0px) translateY(-3px) !important;
+    transform: translateX(-1px) translateY(-3px) !important;
   }
 
   .home {
