@@ -843,13 +843,15 @@ footer li {
     display: flex;
     left: 20px !important;
     top: 0 !important;
-
+    margin: auto;
+    justify-content: center;
+    align-items: center;
     background-color: var(--pink);
   }
 
   .playAudio i {
     font-size: 3rem;
-
+    top: 10%;
     margin: auto;
     justify-content: center !important;
     align-items: center;
